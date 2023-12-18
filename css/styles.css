@@ -74,7 +74,7 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
-  box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08)
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08)
 }
 
 .header-container {
@@ -125,7 +125,7 @@ img {
   gap: 40px;
 }
 
-.header-nav {
+.header-link {
   position: relative;
   color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -178,12 +178,16 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   gap: 40px;
-  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
   color: #404bbf;
+}
+
+.contacts-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -342,6 +346,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -542,8 +547,8 @@ background:#FFF;
   padding: 8px;
 }
 
-.bottom-btn:hover,
-.bottom-btn:focus {
+.bottom-link:hover,
+.bottom-link:focus {
   background-color: #31D0AA;
 }
 
@@ -565,6 +570,7 @@ background:#FFF;
   margin-bottom: 16px;
   color: #FFF;
   letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 .bottom-link {
@@ -572,5 +578,9 @@ background:#FFF;
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+} 
 
