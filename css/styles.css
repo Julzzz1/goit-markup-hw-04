@@ -119,9 +119,26 @@ img {
  gap: 40px;
 }
 
-.header-list {
+.header-nav {
   display: flex;
   gap: 40px;
+}
+
+.header-link.current {
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-link.current ::after {
+  content: "";
+  position: relative;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .header-link {
@@ -158,6 +175,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   gap: 40px;
+  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -170,13 +188,15 @@ img {
 
 /* Hero */
 .hero {
-  background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url(../images/hero/people-office\ 1.png);
+  background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), 
+  url(../images/hero/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
   margin: 0 auto;
+  max-width: 1440px;
   
   
 }
@@ -195,6 +215,7 @@ img {
 
 .hero-button {
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #fff;
   /* Button Text */
   font-weight: 500;
@@ -216,12 +237,59 @@ img {
 }
 
 
+/* Advantages */
+
+
 .advantages {
   display: flex;
   margin: auto;
   padding: 120px 0;
 
 }
+
+.advantages {
+  padding: 120px 0px;
+}
+
+.advantages-wrap {
+  
+  border: 1px solid #8E8F99;
+  background: #F4F4FD; 
+  padding: 24px 100px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  border-radius: 4px;
+
+  
+  
+}
+
+.advantages-all {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-basis: calc((100% - 72px) / 4);
+} 
+
+.advantages-list {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.advantages-title {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+  margin-bottom: 8px
+}
+
+
+/* Team */
 
 
 .team {
@@ -265,51 +333,19 @@ img {
   align-items: center;
   justify-content: center;
   fill: #f4f4fd;
+  
 }
+
+
+
+
+
 
 .icon-team:hover,
 .icon-team:focus {
   background-color: #31D0AA;
 }
 
-
-
-/* Advantages */
-
-.advantages {
-  padding: 120px 0px;
-}
-
-.advantages-wrap {
-  
-    border: 1px solid #8E8F99;
-    background: #F4F4FD; 
-    padding: 24px 100px;
-    margin-bottom: 8px;
-  
-  
-}
-
-.advantages-all {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-basis: calc((100% - 72px) / 4);
-} 
-
-.advantages-list {
-  flex-basis: calc((100% - 72px) / 4);
-}
-
-.advantages-title {
-  color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  max-width: 264px;
-  margin-bottom: 8px
-}
 
 
 /* Team */
@@ -336,6 +372,7 @@ align-items: center;
 gap: 32px; 
 margin-right: 24px;
 background-color: #ffffff;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card {
@@ -408,12 +445,12 @@ background:#FFF;
 
   top: 0;
   transform: translateY(100%);
-
-  color: var(--light);
-  background-color: var(--primary-brand);
-  letter-spacing: inherit;
-
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .portfolio-all .portfolio-list:hover .overlay,
@@ -439,6 +476,13 @@ background:#FFF;
 .portfolio-all .card-change {
   position: relative;
   overflow: hidden;
+}
+
+.overlay {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
 }
 
 
@@ -468,6 +512,13 @@ background:#FFF;
   width: 264px;
 }
 
+.bottom-wrap {
+  
+  display: flex;
+  align-items: baseline;
+  margin-left: 120px;
+}
+
 
 .bottom-socials {
   display: flex;
@@ -476,8 +527,8 @@ background:#FFF;
   padding: 8px;
 }
 
-.bottom-social .link:hover,
-.bottom-socials .link:focus {
+.bottom-btn:hover,
+.bottom-btn:focus {
   background-color: #31D0AA;
 }
 
@@ -493,12 +544,14 @@ background:#FFF;
 
 }
 
-.media {
+.bottom-media {
   font-weight: 500;
-  display: inline-block;
   font-size: 16px;
   margin-bottom: 16px;
-
   color: #FFF;
+}
+
+.bottom-link {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
