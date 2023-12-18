@@ -123,14 +123,9 @@ img {
 .header-nav {
   display: flex;
   gap: 40px;
-  color: #404bbf
+
 }
 
-.header-link {
-  position: relative;
-  color: #404bbf;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .header-link::after {
   content: "";
@@ -144,7 +139,8 @@ img {
 }
 
 .header-link {
-  color: #2e2f42;
+  color: #404bbf;
+  position: relative;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
