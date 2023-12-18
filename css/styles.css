@@ -123,6 +123,7 @@ img {
 .header-nav {
   display: flex;
   gap: 40px;
+  color: #404bbf
 }
 
 .header-link {
@@ -152,6 +153,7 @@ img {
   display: flex;
   gap: 40px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 
@@ -186,7 +188,7 @@ img {
   color: #404bbf;
 }
 
-.contacts-item {
+.contacts-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
